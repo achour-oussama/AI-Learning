@@ -1,30 +1,30 @@
-# Exercice : Analyse et Prédiction sur le Dataset du Titanic
+# Exercise: Analysis and Prediction on the Titanic Dataset
 
-## Étape 1 : Chargement et exploration initiale
-Chargez le fichier de données `train.csv` dans un DataFrame nommé `df`. Affichez ses premières lignes, déterminez ses dimensions exactes (nombre de lignes et de colonnes) et listez les noms de toutes les variables disponibles.
+## Step 1: Loading and Initial Exploration
+Load the `train.csv` data file into a DataFrame named `df`. Display its first rows, determine its exact dimensions (number of rows and columns), and list the names of all available variables.
 
-## Étape 2 : Diagnostic des données manquantes
-Analysez la structure technique de votre DataFrame. Identifiez précisément quelles colonnes contiennent des valeurs manquantes et calculez le nombre exact de données manquantes pour chacune d'elles.
+## Step 2: Missing Data Diagnosis
+Analyze the technical structure of your DataFrame. Identify exactly which columns contain missing values and calculate the exact number of missing values for each one.
 
-## Étape 3 : Statistiques descriptives par groupe
-Calculez le nombre total de rescapés et de victimes. Ensuite, déterminez le taux de survie moyen selon le sexe des passagers, puis selon leur classe de voyage, afin d'observer les premiers facteurs d'influence.
+## Step 3: Descriptive Statistics by Group
+Calculate the total number of survivors and victims. Then determine the average survival rate by passenger sex and by travel class in order to observe the first influencing factors.
 
-## Étape 4 : Nettoyage du dataset
-Traitez les données manquantes identifiées à l'étape 2 : 
-* Remplacez les valeurs manquantes de la colonne des âges par la valeur médiane de cette colonne.
-* Remplacez les valeurs manquantes de la colonne d'embarquement par la valeur la plus fréquente (le mode).
-* Supprimez définitivement la colonne des cabines car elle contient trop de données manquantes pour être exploitable.
+## Step 4: Dataset Cleaning
+Handle the missing data identified in step 2:
+* Replace missing values in the age column with the median value of that column.
+* Replace missing values in the embarkation column with the most frequent value (the mode).
+* Permanently remove the cabin column because it contains too many missing values to be usable.
 
-## Étape 5 : Encodage des variables catégorielles
-Les variables liées au sexe et au port d'embarquement contiennent du texte. Transformez ces variables textuelles en variables numériques afin qu'elles puissent être interprétées par un modèle de Machine Learning.
+## Step 5: Encoding Categorical Variables
+The variables related to sex and embarkation port contain text. Convert these text variables into numeric variables so that they can be interpreted by a machine learning model.
 
-## Étape 6 : Visualisation de données
-Utilisez une bibliothèque graphique pour générer deux visualisations :
-* Un graphique en barres représentant le taux de survie en fonction de la classe des passagers.
-* Un histogramme affichant la distribution des âges des passagers.
+## Step 6: Data Visualization
+Use a plotting library to generate two visualizations:
+* A bar chart showing the survival rate by passenger class.
+* A histogram showing the passenger age distribution.
 
-## Étape 7 : Séparation des données (Split Train/Test)
-Isolez la variable cible (ce que l'on cherche à prédire) des variables explicatives (les caractéristiques des passagers). Divisez ensuite votre jeu de données en deux ensembles distincts : un ensemble d'entraînement et un ensemble de test (avec une proportion de 80% / 20%).
+## Step 7: Train/Test Split
+Separate the target variable (what we want to predict) from the explanatory variables (the passenger characteristics). Then split your dataset into two separate sets: a training set and a test set (with an 80% / 20% ratio).
 
-## Étape 8 : Entraînement et prédiction d'un premier modèle
-Créez et entraînez un modèle de régression logistique sur vos données d'entraînement. Utilisez ensuite ce modèle pour prédire la survie des passagers de votre ensemble de test.
+## Step 8: Training and Predicting with a First Model
+Create and train a logistic regression model on your training data. Then use this model to predict passenger survival on your test set.
